@@ -1,0 +1,3 @@
+#!/bin/bash
+curl -s https://dolarhoje.com/ | grep 'id="nacional"' | sed -e 's/.*id="nacional"//' | cut -d '"' -f 2
+
