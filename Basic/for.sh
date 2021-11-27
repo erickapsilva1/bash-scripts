@@ -1,7 +1,23 @@
-#!/bin/bash
-# Ler valores de uma lista
+#/bin/bash
 
-for livro in 'Laranja Mecânica' Nós 'Flores para Algernon' 'Fahrenheit 451'
-do
-	echo "Já li" $livro
+for v in 0 1 2 3 4 5 6 7 8 9 ; do
+  echo $v
 done
+
+for v in $(seq 10 10 100) ; do
+  echo $v
+done
+
+readpass(){
+  echo -n "Passwd: "
+  read -s passwd
+}
+
+readpass
+
+while [ "$passwd" != "secret" ]; do
+  echo "Invalid passwd"
+  readpass
+done
+
+echo ''
